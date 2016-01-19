@@ -1,0 +1,73 @@
+<html ng-app="phonecatApp">
+
+<head>
+  <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+  <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" data-semver="3.3.6" data-require="bootstrap@*"></script>
+  <script data-require="angular.js@1.4.8" data-semver="1.4.8" src="https://code.angularjs.org/1.4.8/angular.js"></script>
+  <link href="style.css" rel="stylesheet" />
+  <script src="script.js"></script>
+  <script src="controllers.js"></script>
+</head>
+
+<body ng-controller="PhoneListCtrl">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+
+        <ul class="nav nav-pills">
+          <li role="presentation">
+            <a href="index.html">Trainings</a>
+          </li>
+          <li class="dropdown">
+            <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Kalender                 <span class="caret"></span>
+              </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">Buchungen</a>
+              </li>
+              <li>
+                <a href="#">Export</a>
+              </li>
+            </ul>
+          </li>
+          <li role="presentation">
+            <a href="#">Newbies</a>
+          </li>
+          <li role="presentation">
+            <a href="#">Administration</a>
+          </li>
+        </ul>
+
+
+        <div class="row">
+          <div class="col-xs-3 col-sm-3">
+            Suche:
+            <input ng-model="query">
+            Sortieren nach:
+            <select ng-model="order">
+              <option value="titel">Name</option>
+              <option value="age">Neuste</option>
+            </select>
+          </div>
+          <div class="col-xs-9 col-sm-9">
+            <ul class="training">
+              <li ng-repeat="training in trainings | filter:query  | orderBy:order">
+                <p class="lead">{{training.titel}}</p>
+                <p><strong>Datum:</strong> {{training.datum}}</p>
+                <p><strong>Preis:</strong> {{training.preis}} Euro</p>
+                <p>{{training.beschreibung}}</p>
+                <hr>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

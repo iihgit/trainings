@@ -1,0 +1,47 @@
+/* Styles go here */
+body{
+  margin:0;
+  padding:0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+.btn {
+  margin-top:5px;
+}
+.col-md-3{
+  margin-top:0px;
+  margin-bottom:20px;
+
+}
+
+.texthr{
+  margin-top: 0;
+  margin-bottom:5px;
+}
+p{
+  margin:0;
+}
+.window{
+  height:125px;
+
+}
+.test{
+  height:100%;
+  width:100%;
+  background-color:grey;
+}
+input{
+  margin-top:5px;
+  width:100%;
+}
+select{
+  width:100%;
+}
+.training li{
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+.nav{
+  background-color:#eeeeee;
+  margin-bottom:10px;
+}
