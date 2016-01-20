@@ -1,0 +1,19 @@
+{
+    "name": "git-trainings",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "private": true,
+    "dependencies": {
+        "angular": "1.4.x",
+        "angular-mocks": "1.4.x",
+        "jquery": "~2.1.1",
+        "bootstrap": "~3.3.6",
+        "angular-route": "1.4.x"
+    }
+}

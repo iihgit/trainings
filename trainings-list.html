@@ -1,0 +1,21 @@
+<ul class="training">
+    <li ng-repeat="training in trainings | filter:query  | orderBy:order">
+        <div class="row">
+            <div class="col-xs-2 col-sm-2">
+                <a href="/#/trainings/{{training.id}}">
+                    <img ng-src="{{training.imgUrl}}" class="img-responsive" alt="Bald!">
+                </a>
+            </div>
+            <div class="col-xs-10 col-sm-10">
+                <p class="lead">
+                    <a href="/#/trainings/{{training.id}}">{{training.titel}}</a>
+                </p>
+                <p>{{training.id}}</p>
+                <p><strong>Datum:</strong> {{training.datum}}</p>
+                <p><strong>Preis:</strong> {{training.preis}} Euro</p>
+                <p>{{training.beschreibung}}</p>
+            </div>
+        </div>
+        <hr>
+    </li>
+</ul>
