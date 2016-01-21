@@ -16,63 +16,56 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
 
-                <ul class="nav nav-pills">
-                    <li role="presentation">
-                        <a href="index.html">Trainings</a>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Kalender<span class="caret"></span>
-              </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Buchungen</a>
-                            </li>
-                            <li>
-                                <a href="#">Export</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li role="presentation">
-                        <a href="#">Newbies</a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#">Administration</a>
-                    </li>
-                    <li>
-
-                        <input ng-model="query">
-                    </li>
-                </ul>
-
-                <div class="row">
-                    <div class="col-xs-8 col-sm-8">
-
-                    </div>
-                    <div class="col-xs-4 col-sm-4">
-                        Sortieren nach:
-                        <select ng-model="order">
-                            <option value="titel">Name</option>
-                            <option value="age">Neuste</option>
-                        </select>
-                    </div>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Portal 2.0</a>
                 </div>
-                <div class="row">
-                    <div class="col-xs-3 col-sm-3">
-
-                    </div>
-                    <div class="col-xs-9 col-sm-9">
-                        <div ng-view></div>
-                    </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Trainings</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kalender <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Termine</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">Export</li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Suche" ng-model="query">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
                 </div>
-
-
+                <!--/.nav-collapse -->
             </div>
-        </div>
-    </div>
+            <!--/.container-fluid -->
+        </nav>
 
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="well">
+            <div ng-view></div>
+        </div>
+
+    </div>
+    <!-- /container -->
 </body>
 
 </html>
