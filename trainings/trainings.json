@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "terminID": 1,
         "titel": "ABAP Entwicklung mit SAP HANA",
         "imgUrl": "http://placehold.it/350x350",
         "datum": "21.02.2016",

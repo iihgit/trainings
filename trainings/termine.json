@@ -1,0 +1,14 @@
+[
+    {
+        "TID": 1,
+        "name": "TestTermin1"
+  },
+    {
+        "TID": 2,
+        "name": "TestTermin2"
+  },
+    {
+        "TID": 3,
+        "name": "TestTermin3"
+  }
+]

@@ -1,9 +1,9 @@
     {
-        "id": 2,
+        "id": 123,
         "name": "Advanced Architecting on AWS",
         "untertitel": "Schulung des Ausbildungspfades Architects",
         "dauer": 3,
         "preis": 360,
-        "ziele": "<ul><li>Mehrere AWS-Konten für Ihre Organisation verwalten<\/li><\/ul>",
+        "ziele": "Mehrere AWS-Konten für Ihre Organisation verwalten",
         "inhalt": "AWS-Konto-Strategien; Fortgeschrittene Netzwerkarchitektur"
     }
