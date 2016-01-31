@@ -4,7 +4,8 @@
 var phonecatApp = angular.module('phonecatApp', [
     'ngRoute',
     'phonecatControllers',
-    'phonecatService'
+    'phonecatService',
+    'ui.bootstrap'
 ]);
 
 phonecatApp.config(['$routeProvider',
@@ -18,9 +19,9 @@ phonecatApp.config(['$routeProvider',
             templateUrl: 'pages/details.html',
             controller: 'TrainingDetailsCtrl'
         }).
-        when('/trainings/:id/:TID', {
+        when('/trainings/:id/:id', {
             templateUrl: 'pages/termin.html',
-            controller: 'TerminCtrl'
+            controller: 'TrainingDetailsCtrl'
         }).
         otherwise({
             redirectTo: '/trainings'

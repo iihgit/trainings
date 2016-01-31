@@ -1,14 +1,17 @@
 [
     {
-        "TID": 1,
-        "name": "TestTermin1"
-  },
+        "id": 1,
+        "name": "TestTermin1",
+        "desc": "lipsum1"
+},
     {
-        "TID": 2,
-        "name": "TestTermin2"
-  },
+        "id": 2,
+        "name": "TestTermin2",
+        "desc": "lipsum2"
+},
     {
-        "TID": 3,
-        "name": "TestTermin3"
-  }
+        "id": 3,
+        "name": "TestTermin3",
+        "desc": "lipsum3"
+}
 ]

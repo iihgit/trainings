@@ -12,3 +12,8 @@ phonecatService.factory('TrainingSer', ['$resource',
             }
         });
 }]);
+
+phonecatService.factory('TerminService',
+    function ($resource) {
+        return $resource('trainings/termine.json')
+    });

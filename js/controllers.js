@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', []);
+var phonecatControllers = angular.module('phonecatControllers', ['ui.bootstrap']);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', 'TrainingSer',
 function ($scope, TrainingSer) {
@@ -6,20 +6,28 @@ function ($scope, TrainingSer) {
         $scope.order = 'titel';
 }]);
 
-phonecatControllers.controller('TrainingDetailsCtrl', ['$scope', '$routeParams', 'TrainingSer',
-    function ($scope, $routeParams, TrainingSer) {
+phonecatControllers.controller('TrainingDetailsCtrl', ['$scope', '$routeParams', 'TrainingSer', 'TerminService',
+    function ($scope, $routeParams, TrainingSer, TerminService, $timeout, $modal) {
         $scope.trainingDetails = TrainingSer.get({
             id: $routeParams.id
         });
+        $scope.termine = TerminService.query();
+
+
+        $scope.groups = [
+            {
+                title: 'Dynamic Group Header - 1',
+                content: 'Dynamic Group Body - 1'
+    },
+            {
+                title: 'Dynamic Group Header - 2',
+                content: 'Dynamic Group Body - 2'
+    }
+  ];
+
+        $scope.status = {
+            isFirstOpen: true,
+            isFirstDisabled: false
+        };
+        $scope.isCollapsed = false;
     }]);
-
-phonecatControllers.controller('TerminCtrl', function ($scope, $routeParams, $http) {
-
-    $scope.TID = $routeParams.TID;
-
-    $http.get('/trainings/termine.json').success(function (data) {
-        $scope.termine = data.filter(function (entry) {
-            return entry.TID === $scope.TID
-        })[0];
-    });
-});

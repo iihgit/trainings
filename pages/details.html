@@ -1,5 +1,5 @@
 <h1>{{trainingDetails.name}}</h1>
-<small>Preis: <a href="/#/trainings/{{training.id}}/{{termin.terminId}}">{{Termin.terminID}}</a></small>
+<small>Preis: </small>
 <hr>
 <div class="row">
     <div class="col-xs-6 col-sm-6">
@@ -14,11 +14,17 @@
 </div>
 <div class="row">
     <div class="col-xs-12 col-sm-12">
-        <ul class="training">
-            <li ng-repeat="termin in trainingDetails.termine">
-                <a href="/#/trainings/{{training.id}}/{{termin}}">{{termin}}</a>
-                <hr>
-            </li>
-        </ul>
+        <div class="panel panel-default" ng-repeat="termin in termine">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a href="" ng-click="isCollapsed = !isCollapsed">{{termin.name}}</a><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isCollapsed, 'glyphicon-chevron-right': !isCollapsed}"></i>
+                </h4>
+            </div>
+            <div uib-collapse="!isCollapsed">
+                <div class="panel-body">{{termin.desc}}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<div>
