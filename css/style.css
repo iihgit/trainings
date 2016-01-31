@@ -23,3 +23,13 @@ select {
 .panel-body ul li {
     margin-bottom: 5px;
 }
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+.termindesc {
+    padding: 10px;
+    padding-left: 15px;
+}

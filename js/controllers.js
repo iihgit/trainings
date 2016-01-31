@@ -1,4 +1,4 @@
-var phonecatControllers = angular.module('phonecatControllers', ['ui.bootstrap']);
+var phonecatControllers = angular.module('phonecatControllers', []);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', 'TrainingSer',
 function ($scope, TrainingSer) {

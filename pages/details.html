@@ -21,7 +21,15 @@
                 </h4>
             </div>
             <div uib-collapse="!isCollapsed">
-                <div class="panel-body">{{termin.desc}}
+                <div class="row termindesc">
+                    <div class="col-xs-10 col-sm-10">
+
+                        <p>{{termin.desc}}</p>
+                    </div>
+                    <div class="col-xs-2 col-sm-2">
+                        <button type="button" class="btn btn-primary btn-sm pull-right" id={{termin.id}}>Buchen</button>
+                    </div>
+
                 </div>
             </div>
         </div>
