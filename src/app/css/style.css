@@ -1,0 +1,39 @@
+/* Styles go here */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color: #232937;
+}
+.test {
+    background-color: blue;
+}
+select {
+    width: 100%;
+}
+.training li {
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+.panel-body ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.panel-body ul li {
+    margin-bottom: 5px;
+}
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+.termindesc {
+    padding: 10px;
+    padding-left: 15px;
+}
+a {
+    color: #673AB7;
+}

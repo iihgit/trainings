@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "terminID": 12,
+    "name": "ABAP Entwicklung mit SAP HANA",
+    "untertitel": "Die Schulung erläutert die technischen Konzepte von SAP HANA",
+    "dauer": 3,
+    "preis": 360,
+    "ziele": "Lernen Sie die technischen Konzepte von SAP HANA kennen und wie Sie diese aus der ABAP Welt nutzen können.",
+    "inhalt": "Technische Konzepte",
+    "termine": {
+        "1": "test",
+        "2": "test2",
+        "3": "test3"
+    }
+}
