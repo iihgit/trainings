@@ -6,6 +6,10 @@ body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     background-color: #232937;
+    color: aliceblue;
+}
+.well {
+    margin-top: 70px;
 }
 .test {
     background-color: blue;
@@ -14,15 +18,7 @@ select {
     width: 100%;
 }
 .training li {
-    margin-bottom: 20px;
     list-style-type: none;
-}
-.panel-body ul {
-    list-style-type: none;
-    padding-left: 10px;
-}
-.panel-body ul li {
-    margin-bottom: 5px;
 }
 .nav,
 .pagination,
@@ -30,10 +26,12 @@ select {
 .panel-title a {
     cursor: pointer;
 }
-.termindesc {
-    padding: 10px;
-    padding-left: 15px;
-}
 a {
     color: #673AB7;
+}
+#suche {
+    top: 8px;
+}
+#sidebar {
+    margin-top: 70px;
 }

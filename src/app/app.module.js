@@ -8,6 +8,7 @@
         .module('app', [
 
                 'app.core',
+                'app.nav',
                 'app.list',
                 'app.details'
     ])
