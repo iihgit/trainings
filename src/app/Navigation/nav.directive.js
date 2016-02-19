@@ -3,7 +3,7 @@
 
     angular
         .module('app.nav')
-        .controller('navbarController', navbarController)
+        .controller('navController', navController)
         .directive('navbarDirective', navbarDirective);
 
 
@@ -15,16 +15,18 @@
                 sidebar: '&',
                 state: '='
             },
-            controller: 'navbarController',
+            controller: 'navController',
             controllerAs: 'vm'
         };
     }
 
-    function navbarController() {
+    navController.$inject = ['sidebarService'];
+
+    function navController(sidebarService) {
         var vm = this;
 
+        vm.state = sidebarService.status;
+
+        vm.toggleState = sidebarService.toggle;
     }
-
-
-
 })();

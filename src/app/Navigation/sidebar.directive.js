@@ -11,26 +11,20 @@
         return {
             templateUrl: 'app/Navigation/sidebar.html',
             restrict: 'E',
-            scope: {
-                sidebar: '&',
-                state: '='
-            },
+            scope: {},
             controller: 'sidebarController',
             controllerAs: 'vm'
         };
     }
 
-    function sidebarController() {
+    sidebarController.$inject = ['sidebarService'];
+
+    function sidebarController(sidebarService) {
         var vm = this;
 
-        vm.state = false;
+        vm.state = sidebarService.status;
 
-        vm.toggleState = toggleState;
-
-        function toggleState() {
-            vm.state = !vm.state;
-        }
-
+        vm.toggleState = sidebarService.toggle;
     }
 
 })();

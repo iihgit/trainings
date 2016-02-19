@@ -19,14 +19,14 @@
 <body>
     <div class="row">
         <div class="col-md-12">
-            <navbar-Directive sidebar='vm.toggleState()' state='vm.state'></navbar-Directive>
+            <navbar-Directive></navbar-Directive>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-3">
             <div id="sidebar">
-                <sidebar-Directive sidebar='vm.toggleState()' state='vm.state'></sidebar-Directive>
+                <sidebar-Directive></sidebar-Directive>
             </div>
         </div>
         <div class="col-md-6">
@@ -59,6 +59,7 @@
     <!-- core -->
     <script src="app/core/core.module.js"></script>
     <script src="app/core/list.service.js"></script>
+    <script src="app/core/sidebar.service.js"></script>
 
     <!-- liste -->
     <script src="app/liste/list.module.js"></script>
