@@ -1,32 +1,27 @@
 (function () {
     'use strict';
-
     angular
         .module('app.nav')
-        .controller('navController', navController)
-        .directive('navbarDirective', navbarDirective);
-
+        .directive('navbarDirective', navbarDirective)
 
     function navbarDirective() {
+
         return {
             templateUrl: 'app/Navigation/navbar.html',
             restrict: 'E',
-            scope: {
-                sidebar: '&',
-                state: '='
-            },
-            controller: 'navController',
-            controllerAs: 'vm'
+            scope: {},
+            controller: navController,
+            controllerAs: 'vm',
         };
     }
 
-    navController.$inject = ['sidebarService'];
+    navController.$inject = ['showService']
 
-    function navController(sidebarService) {
+    function navController(showService) {
         var vm = this;
 
-        vm.state = sidebarService.status;
+        vm.data = showService.obj;
 
-        vm.toggleState = sidebarService.toggle;
     }
+
 })();
